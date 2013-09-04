@@ -17,7 +17,34 @@ var game = {
     
     //create context to allow drawing onto the canvas
 		this.ctx = this.canvas.getContext('2d');
+    
+    //allows keyboard input
+		keyBoardInput.initialize();
 	},
+}
+
+var keyBoardInput = {
+	initialize:function() {
+		this._bind_keys();
+	},
+  
+	_bind_keys:function() {
+    //called whenever a key is pressed
+		window.onkeydown = function(e) {
+      //checks if key is a letter
+			if(e.keyCode >= 65 && e.keyCode <= 90) {
+        
+			}
+		}
+		
+    //called whenever a key is released
+		window.onkeyup = function(e) {
+      //checks if key is a letter
+			if(e.keyCode >= 65 && e.keyCode <= 90) {
+        
+			}
+		}
+	}
 }
 
 window.onload = function() {
