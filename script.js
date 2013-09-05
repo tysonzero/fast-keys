@@ -25,15 +25,18 @@ var game = {
 		this.timer = setInterval(function(){game.run()}, 16 + 2/3);	
 	},
   
+  //run every 1/60th of a second
   run:function() {
 		this.update();
 		this.draw();
 	},
 	
+  //logic
 	update:function() {
     theKey.update();
 	},
 	
+  //drawing to screen
 	draw:function() {
     theKey.draw();
 	},
@@ -64,10 +67,15 @@ var keyBoardInput = {
 }
 
 var theKey = {
+  //integer representing the next letter to press
+  key:0,
+
+  //logic
   update:function() {
     
   },
   
+  //drawing to screen
   draw:function() {
     
   },
