@@ -31,11 +31,11 @@ var game = {
 	},
 	
 	update:function() {
-    
+    keyList.update();
 	},
 	
 	draw:function() {
-    
+    keyList.draw();
 	}
 }
 
@@ -61,6 +61,16 @@ var keyBoardInput = {
 			}
 		}
 	}
+}
+
+var keyList = {
+  update:function() {
+    
+  }
+  
+  draw:function() {
+    
+  }
 }
 
 window.onload = function() {
