@@ -51,15 +51,7 @@ var keyBoardInput = {
     //called whenever a key is pressed
 		window.onkeydown = function(e) {
       //checks if key is a letter
-			if(e.keyCode >= 65 && e.keyCode <= 90) {
-        
-			}
-		}
-		
-    //called whenever a key is released
-		window.onkeyup = function(e) {
-      //checks if key is a letter
-			if(e.keyCode >= 65 && e.keyCode <= 90) {
+			if(e.keyCode >= 65 && e.keyCode < 91) {
         
 			}
 		}
@@ -68,8 +60,12 @@ var keyBoardInput = {
 
 var theKey = {
   //integer representing the next letter to press
-  key:0,
+  key:Math.floor(Math.random()*25),
 
+  keyPressed:function() {
+  
+  },
+  
   //logic
   update:function() {
     
