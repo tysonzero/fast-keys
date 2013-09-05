@@ -77,7 +77,8 @@ var theKey = {
   
   //drawing to screen
   draw:function() {
-    
+	game.ctx.font="30px Arial";
+	game.ctx.fillText(String.fromCharCode(this.key + 65), 400, 300);
   },
 }
 
