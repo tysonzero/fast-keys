@@ -36,7 +36,7 @@ var game = {
 	
 	draw:function() {
     keyList.draw();
-	}
+	},
 }
 
 var keyBoardInput = {
@@ -60,17 +60,17 @@ var keyBoardInput = {
         
 			}
 		}
-	}
+	},
 }
 
 var keyList = {
   update:function() {
     
-  }
+  },
   
   draw:function() {
     
-  }
+  },
 }
 
 window.onload = function() {
