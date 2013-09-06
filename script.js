@@ -100,7 +100,7 @@ var scoreboard = {
   draw:function() {
     game.ctx.font="30px Arial";
     game.ctx.fillText("Score: " + this.score, 600, 100);
-    game.ctx.fillText("Time: " + this.time, 200, 100);
+    game.ctx.fillText("Time: " + Math.floor(this.time), 200, 100);
   },
 }
 
