@@ -83,6 +83,7 @@ var theKey = {
   //drawing to screen
   draw:function() {
     game.ctx.font="30px Arial";
+    game.ctx.textAlign="center";
     game.ctx.fillText(String.fromCharCode(this.key + 65), 400, 300);
   },
 }
@@ -99,6 +100,7 @@ var scoreboard = {
   //drawing to screen
   draw:function() {
     game.ctx.font="30px Arial";
+    game.ctx.textAlign="center";
     game.ctx.fillText("Score: " + this.score, 600, 100);
     game.ctx.fillText("Time: " + Math.floor(this.time), 200, 100);
   },
