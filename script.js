@@ -68,6 +68,7 @@ var theKey = {
   keyPressed:function(tempKey) {
     //randomizes the key if correct key is pressed
     if (tempKey === this.key) {
+      scoreboard.score++;
       this.key = Math.floor(Math.random()*25);
     }
   },
@@ -81,6 +82,21 @@ var theKey = {
   draw:function() {
     game.ctx.font="30px Arial";
     game.ctx.fillText(String.fromCharCode(this.key + 65), 400, 300);
+  },
+}
+
+var scoreboard = {
+  score:0, //current score
+  time:0, //time in seconds
+  
+  //logic
+  update:function() {
+    this.time += 1/60;
+  },
+  
+  //drawing to screen
+  draw:function() {
+    
   },
 }
 
