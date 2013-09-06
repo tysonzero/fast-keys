@@ -34,6 +34,7 @@ var game = {
   //logic
 	update:function() {
     theKey.update();
+    scoreboard.update();
 	},
 	
   //drawing to screen
@@ -41,6 +42,7 @@ var game = {
 		this.ctx.clearRect(0, 0, game.width, game.height);
     
     theKey.draw();
+    scoreboard.draw();
 	},
 }
 
@@ -96,7 +98,9 @@ var scoreboard = {
   
   //drawing to screen
   draw:function() {
-    
+    game.ctx.font="30px Arial";
+    game.ctx.fillText("Score: " + this.score, 600, 100);
+    game.ctx.fillText("Time: " + this.time, 200, 100);
   },
 }
 
