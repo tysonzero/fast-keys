@@ -90,11 +90,11 @@ var theKey = {
 
 var scoreboard = {
   score:0, //current score
-  time:0, //time in seconds
+  time:30, //time in seconds
   
   //logic
   update:function() {
-    this.time += 1/60;
+    this.time -= 1/60;
   },
   
   //drawing to screen
