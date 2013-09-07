@@ -68,12 +68,13 @@ var theKey = {
   
   //called whenever a letter is pressed
   keyPressed:function(tempKey) {
-    //randomizes the key if correct key is pressed
+    //randomizes the key if correct key is pressed and increases score
     if (tempKey === this.key) {
       scoreboard.score++;
       this.key = Math.floor(Math.random()*25);
     }
     else {
+      //decreases score if incorrect key is pressed
       scoreboard.score--;
     }
   },
@@ -98,13 +99,17 @@ var scoreboard = {
   
   //logic
   update:function() {
+    //decreases timer by 1 per second
     this.time -= 1/60;
     
+    //restarts game if time runs out
     if (this.time < 0) {
+      //changes highscore if current score is higher
       if (this.score > this.highscore) {
         this.highscore = this.score;
       }
       
+      //sets score and time to starting values 
       this.score = 0;
       this.time = 30;
     }
@@ -112,6 +117,7 @@ var scoreboard = {
   
   //drawing to screen
   draw:function() {
+    //draw score and time to screen
     game.ctx.font="30px Arial";
     game.ctx.textAlign="center";
     game.ctx.fillText("Score: " + this.score, 600, 30);
