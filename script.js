@@ -91,10 +91,20 @@ var theKey = {
 var scoreboard = {
   score:0, //current score
   time:30, //time in seconds
+  highscore:0, //maximum score
   
   //logic
   update:function() {
     this.time -= 1/60;
+    
+    if (this.time < 0) {
+      if (this.score > this.highscore) {
+        this.highscore = this.score;
+      }
+      
+      this.score = 0;
+      this.time = 30;
+    }
   },
   
   //drawing to screen
