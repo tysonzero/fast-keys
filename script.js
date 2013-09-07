@@ -73,6 +73,9 @@ var theKey = {
       scoreboard.score++;
       this.key = Math.floor(Math.random()*25);
     }
+    else {
+      scoreboard.score--;
+    }
   },
   
   //logic
