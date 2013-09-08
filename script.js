@@ -6,9 +6,6 @@ var game = {
   //use dimensions identical to size of enclosing <div>
   width:800,
   height:600,
-  
-  //pauses the game when pause is true
-  pause:true,
 	
 	setup:function() {
     //get canvas created in html so it can be accessed
@@ -30,9 +27,9 @@ var game = {
   
   //run every 1/60th of a second
   run:function() {
-  if (!this.pause) {
-    this.update();
-  }
+    if (!pause.enabled) {
+      this.update();
+    }
     this.draw();
 	},
 	
@@ -49,10 +46,6 @@ var game = {
     theKey.draw();
     scoreboard.draw();
 	},
-  
-  togglePause:function() {
-    this.pause = !this.pause;
-  },
 }
 
 var keyBoardInput = {
@@ -65,15 +58,35 @@ var keyBoardInput = {
 		window.onkeydown = function(e) {
       //checks if key is a letter
       if(e.keyCode === 32) {
-        game.togglePause();
+        pause.toggle();
       }
 			else if(e.keyCode >= 65 && e.keyCode < 91) {
-        if (!game.pause) {
+        if (!pause.enabled) {
           theKey.keyPressed(e.keyCode - 65);
         }
 			}
 		}
 	},
+}
+
+var pause = {
+  //pauses the game if set to true
+  enabled:true,
+  
+  //unpauses if paused, pauses if unpaused
+  toggle:function() {
+    this.enabled = !this.enabled;
+  },
+  
+  //logic
+  update:function() {
+    
+  },
+  
+  //drawing to screen
+  draw:function() {
+    
+  },
 }
 
 var theKey = {
@@ -126,7 +139,7 @@ var scoreboard = {
       //sets score and time to starting values 
       this.score = 0;
       this.time = 30;
-      game.pause = true;
+      pause.enabled = true;
     }
   },
   
