@@ -41,6 +41,7 @@ var game = {
 	
   //drawing to screen
 	draw:function() {
+    //clear screen
 		this.ctx.clearRect(0, 0, game.width, game.height);
     
     theKey.draw();
