@@ -6,6 +6,9 @@ var game = {
   //use dimensions identical to size of enclosing <div>
   width:800,
   height:600,
+  
+  //pauses the game when pause is true
+  pause:true,
 	
 	setup:function() {
     //get canvas created in html so it can be accessed
@@ -27,7 +30,9 @@ var game = {
   
   //run every 1/60th of a second
   run:function() {
+  if (!this.pause) {
     this.update();
+  }
     this.draw();
 	},
 	
@@ -44,6 +49,10 @@ var game = {
     theKey.draw();
     scoreboard.draw();
 	},
+  
+  togglePause:function() {
+    this.pause = !this.pause;
+  },
 }
 
 var keyBoardInput = {
@@ -55,8 +64,13 @@ var keyBoardInput = {
     //called whenever a key is pressed
 		window.onkeydown = function(e) {
       //checks if key is a letter
-			if(e.keyCode >= 65 && e.keyCode < 91) {
-        theKey.keyPressed(e.keyCode - 65);
+      if(e.keyCode === 32) {
+        game.togglePause();
+      }
+			else if(e.keyCode >= 65 && e.keyCode < 91) {
+        if (!game.pause) {
+          theKey.keyPressed(e.keyCode - 65);
+        }
 			}
 		}
 	},
