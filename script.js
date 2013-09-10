@@ -137,6 +137,21 @@ var pause = {
   },
 }
 
+var finish = {
+  //if true shows the finish screen
+  enabled:false,
+  
+  //logic
+  update:function() {
+    
+  },
+  
+  //drawing to screen
+  draw:function() {
+    
+  },
+}
+
 var theKey = {
   //integer representing the next letter to press
   key:Math.floor(Math.random()*25),
