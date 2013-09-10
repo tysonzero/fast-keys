@@ -44,7 +44,10 @@ var game = {
     //clear screen
 		this.ctx.clearRect(0, 0, game.width, game.height);
     
-    if(!pause.enabled) {
+    if(pause.enabled) {
+      pause.draw();
+    }
+    else {
       theKey.draw();
     }
     scoreboard.draw();
@@ -82,6 +85,7 @@ var pause = {
     this.enabled = !this.enabled;
   },
   
+  //restarts the game
   restart:function() {
   
   },
@@ -93,7 +97,28 @@ var pause = {
   
   //drawing to screen
   draw:function() {
+    //draw outer pause menu box
+    game.ctx.fillStyle="#000000";
+    game.ctx.fillRect(280, 100, 240, 400);
     
+    //draw pause menu title
+    game.ctx.font="45px Arial";
+    game.ctx.textAlign="center";
+    game.ctx.fillStyle="#FFFFFF";
+    game.ctx.fillText("PAUSED", 400, 150);
+    
+    //draw pause menu buttons
+    game.ctx.fillStyle="#FF0000";
+    game.ctx.fillRect(300, 170, 200, 60);
+    
+    //draw pause menu actions
+    game.ctx.font="30px Arial";
+    game.ctx.fillStyle="#000000";
+    game.ctx.fillText("RESUME", 400, 200);
+    
+    //draw pause menu keys
+    game.ctx.font="15px Arial";
+    game.ctx.fillText("press space", 400, 220);
   },
 }
 
@@ -124,6 +149,7 @@ var theKey = {
     //draw the Key
     game.ctx.font="100px Arial";
     game.ctx.textAlign="center";
+    game.ctx.fillStyle="#000000";
     game.ctx.fillText(String.fromCharCode(this.key + 65), 400, 340);
   },
 }
