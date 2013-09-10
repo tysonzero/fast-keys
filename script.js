@@ -27,7 +27,7 @@ var game = {
   
   //run every 1/60th of a second
   run:function() {
-    if (!pause.enabled) {
+    if (!pause.enabled && !finish.enabled) {
       this.update();
     }
     this.draw();
@@ -44,7 +44,10 @@ var game = {
     //clear screen
 		this.ctx.clearRect(0, 0, game.width, game.height);
     
-    if(pause.enabled) {
+    if(finish.enabled) {
+      finish.draw();
+    }
+    else if(pause.enabled) {
       pause.draw();
     }
     else {
