@@ -66,10 +66,7 @@ var keyBoardInput = {
       if(e.keyCode === 8) {
         //restarts game if you press backspace while the game is paused
         if (pause.enabled) {
-          scoreboard.score = 0;
-          scoreboard.time = 30;
-          theKey.key = Math.floor(Math.random()*25);
-          pause.toggle();
+          pause.restart();
         }
       }
       //toggles pause when space key is pressed
@@ -98,7 +95,10 @@ var pause = {
   
   //restarts the game
   restart:function() {
-  
+    scoreboard.score = 0;
+    scoreboard.time = 30;
+    theKey.key = Math.floor(Math.random()*25);
+    pause.toggle();
   },
   
   //logic
