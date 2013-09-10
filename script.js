@@ -44,7 +44,9 @@ var game = {
     //clear screen
 		this.ctx.clearRect(0, 0, game.width, game.height);
     
-    theKey.draw();
+    if(!pause.enabled) {
+      theKey.draw();
+    }
     scoreboard.draw();
 	},
 }
@@ -76,7 +78,12 @@ var pause = {
   
   //unpauses if paused, pauses if unpaused
   toggle:function() {
+    theKey.key = Math.floor(Math.random()*25);
     this.enabled = !this.enabled;
+  },
+  
+  restart:function() {
+  
   },
   
   //logic
@@ -114,6 +121,7 @@ var theKey = {
   
   //drawing to screen
   draw:function() {
+    //draw the Key
     game.ctx.font="100px Arial";
     game.ctx.textAlign="center";
     game.ctx.fillText(String.fromCharCode(this.key + 65), 400, 340);
