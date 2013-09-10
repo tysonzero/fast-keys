@@ -62,17 +62,21 @@ var keyBoardInput = {
 	_bind_keys:function() {
     //called whenever a key is pressed
 		window.onkeydown = function(e) {
-      //checks if key is a letter
+      
       if(e.keyCode === 8) {
+        //restarts game if you press backspace while the game is paused
         if (pause.enabled) {
           scoreboard.score = 0;
           scoreboard.time = 30;
           theKey.key = Math.floor(Math.random()*25);
+          pause.toggle();
         }
       }
+      //toggles pause when space key is pressed
       if(e.keyCode === 32) {
         pause.toggle();
       }
+      //passes in the letter pressed
 			else if(e.keyCode >= 65 && e.keyCode < 91) {
         if (!pause.enabled) {
           theKey.keyPressed(e.keyCode - 65);
@@ -139,15 +143,17 @@ var theKey = {
   
   //called whenever a letter is pressed
   keyPressed:function(tempKey) {
-    //randomizes the key if correct key is pressed and increases score
+    //increases the score if correct key is pressed
     if (tempKey === this.key) {
       scoreboard.score++;
-      this.key = Math.floor(Math.random()*25);
     }
     else {
       //decreases score if incorrect key is pressed
       scoreboard.score--;
     }
+    
+    //randomizes key
+    this.key = Math.floor(Math.random()*25);
   },
   
   //logic
