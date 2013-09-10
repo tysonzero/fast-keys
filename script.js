@@ -53,7 +53,10 @@ var game = {
     else {
       theKey.draw();
     }
-    scoreboard.draw();
+    
+    if(!finish.enabled) {
+      scoreboard.draw();
+    }
 	},
 }
 
@@ -144,6 +147,11 @@ var finish = {
   //if true shows the finish screen
   enabled:false,
   
+  //goes to the finish screen
+  start:function() {
+    this.enabled = true;
+  },
+  
   //logic
   update:function() {
     
@@ -196,21 +204,13 @@ var scoreboard = {
   
   //logic
   update:function() {
-    //decreases timer by 1 per second
-    this.time -= 1/60;
-    
-    //restarts game if time runs out
     if (this.time < 0) {
-      //changes highscore if current score is higher
-      if (this.score > this.highscore) {
-        this.highscore = this.score;
-      }
-      
-      //sets score and time to starting values 
-      this.score = 0;
-      this.time = 30;
-      theKey.key = Math.floor(Math.random()*25);
-      pause.enabled = true;
+      //goes to the finish screen if time runs out
+      finish.start();
+    }
+    else {
+      //decreases timer by 1 per second if there is still time left
+      this.time -= 1/60;
     }
   },
   
