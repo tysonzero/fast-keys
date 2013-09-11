@@ -77,7 +77,12 @@ var keyBoardInput = {
       }
       //toggles pause when space key is pressed
       if(e.keyCode === 32) {
-        pause.toggle();
+        if (finish.enabled) {
+          finish.skip();
+        }
+        else {
+          pause.toggle();
+        }
       }
       //passes in the letter pressed
 			else if(e.keyCode >= 65 && e.keyCode < 91) {
@@ -151,6 +156,19 @@ var finish = {
   start:function() {
     this.enabled = true;
     pause.enabled = true;
+    
+    //changes highscore if current score is higher
+    if (scoreboard.score > scoreboard.highscore) {
+      scoreboard.highscore = scoreboard.score;
+    }
+  },
+  
+  //continues to the menu
+  skip:function() {
+    scoreboard.score = 0; //current score
+    scoreboard.time = 30; //time in seconds
+    
+    this.enabled = false;
   },
   
   //logic
