@@ -150,6 +150,7 @@ var finish = {
   //goes to the finish screen
   start:function() {
     this.enabled = true;
+    pause.enabled = true;
   },
   
   //logic
@@ -159,7 +160,25 @@ var finish = {
   
   //drawing to screen
   draw:function() {
+    game.ctx.textAlign="center";
     
+    game.ctx.fillStyle="#000000";
+    game.ctx.font="60px Arial";
+    game.ctx.fillText("GAME OVER", 400, 140);
+    
+    if (scoreboard.score < scoreboard.highscore) {
+      game.ctx.fillStyle="#FF0000";
+      game.ctx.fillText("TRY AGAIN", 400, 400);
+    }
+    else if (scoreboard.score === scoreboard.highscore) {
+      game.ctx.fillStyle="#00FF00";
+      game.ctx.fillText("HIGHSCORE!", 400, 400);
+    }
+    
+    game.ctx.fillStyle="#000000";
+    game.ctx.font="40px Arial";
+    game.ctx.fillText("SCORE: " + scoreboard.score, 400, 220);
+    game.ctx.fillText("HIGHSCORE: " + scoreboard.highscore, 400, 300);
   },
 }
 
