@@ -197,6 +197,9 @@ var finish = {
     game.ctx.font="40px Arial";
     game.ctx.fillText("SCORE: " + scoreboard.score, 400, 220);
     game.ctx.fillText("HIGHSCORE: " + scoreboard.highscore, 400, 300);
+    
+    game.ctx.font="30px Arial";
+    game.ctx.fillText("PRESS SPACE TO CONTINUE", 400, 520);
   },
 }
 
