@@ -98,6 +98,10 @@ var menu = {
   //display menu if set to true
   enabled:true,
   
+  toggle:function() {
+    this.enabled = !this.enabled;
+  }
+  
   //logic
   update:function() {
   
