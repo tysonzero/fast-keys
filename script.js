@@ -95,6 +95,7 @@ var keyBoardInput = {
 }
 
 var menu = {
+  //display menu if set to true
   enabled:true,
   
   //logic
@@ -102,6 +103,7 @@ var menu = {
   
   },
 
+  //drawing to screen
   draw:function() {
   
   },
