@@ -73,12 +73,17 @@ var keyBoardInput = {
 		window.onkeydown = function(e) {
       
       if(e.keyCode === 8) {
+        //restarts game if you press backspace while in the finish screen
+        if (finish.enabled) {
+          finish.restart();
+        }
         //restarts game if you press backspace while the game is paused
-        if (pause.enabled) {
+        else if (pause.enabled) {
           pause.restart();
         }
       }
       else if(e.keyCode == 27) {
+        //exits to main menu if you press escape while the game is paused
         if (pause.enabled) {
           pause.exit();
         }
@@ -109,6 +114,7 @@ var menu = {
   //display menu if set to true
   enabled:true,
   
+  //starts the game
   start:function() {
     this.enabled = false;
     pause.enabled = false;
@@ -121,21 +127,27 @@ var menu = {
 
   //drawing to screen
   draw:function() {
+    //draw red play button background
     game.ctx.fillStyle="#FF0000";
     game.ctx.fillRect(250, 350, 300, 100);
     
+    //draw black lines either side of title
     game.ctx.fillStyle="#000000";
     game.ctx.fillRect(120, 210, 540, 10);
     game.ctx.fillRect(140, 110, 540, 10);
     
+    //center align all following text
     game.ctx.textAlign="center";
     
+    //draw title
     game.ctx.font="italic 100px Arial";
     game.ctx.fillText("FAST KEYS", 400, 200);
     
+    //draw play text
     game.ctx.font="60px Arial";
     game.ctx.fillText("PLAY", 400, 410);
     
+    //draw play instructions
     game.ctx.font="20px Arial";
     game.ctx.fillText("press space", 400, 440);
   },
@@ -159,6 +171,7 @@ var pause = {
     pause.toggle();
   },
   
+  //exits to the menu
   exit:function() {
     scoreboard.score = 0;
     scoreboard.time = 30;
@@ -226,6 +239,15 @@ var finish = {
     
     this.enabled = false;
     menu.enabled = true;
+  },
+  
+  //restarts the game
+  restart:function() {
+    scoreboard.score = 0;
+    scoreboard.time = 30;
+    theKey.key = Math.floor(Math.random()*25);
+    this.enabled = false;
+    pause.toggle();
   },
   
   //logic
