@@ -116,7 +116,17 @@ var menu = {
 
   //drawing to screen
   draw:function() {
-  
+    game.ctx.textAlign="center";
+    
+    game.ctx.fillStyle="#FF0000";
+    game.ctx.fillRect(250, 250, 300, 100);
+    
+    game.ctx.font="60px Arial";
+    game.ctx.fillStyle="#000000";
+    game.ctx.fillText("PLAY", 400, 310);
+    
+    game.ctx.font="20px Arial";
+    game.ctx.fillText("press space", 400, 340);
   },
 }
 
