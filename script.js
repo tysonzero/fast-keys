@@ -78,7 +78,7 @@ var keyBoardInput = {
           finish.restart();
         }
         //restarts game if you press backspace while the game is paused
-        else if (pause.enabled) {
+        else if (pause.enabled && !menu.enabled) {
           pause.restart();
         }
       }
@@ -113,14 +113,8 @@ var keyBoardInput = {
 var menu = {
   enabled:true, //display menu if set to true
   
-  //resets and starts the game
+  //starts the game
   start:function() {
-    //restarts values to starting values
-    scoreboard.score = 0;
-    scoreboard.time = 30;
-    theKey.key = Math.floor(Math.random()*25);
-    
-    //starts the game
     this.enabled = false;
     pause.enabled = false;
   },
