@@ -30,16 +30,16 @@ var game = {
   
   //run every 1/60th of a second
   run:function() {
-    if (!pause.enabled && !finish.enabled) {
-      this.update();
-    }
+    this.update();
     this.draw();
 	},
 	
   //logic
 	update:function() {
-    theKey.update();
-    scoreboard.update();
+    switch(this.status) {
+      case "play"
+        theKey.update();
+        scoreboard.update();
 	},
 	
   //drawing to screen
