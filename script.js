@@ -94,6 +94,19 @@ var keyBoardInput = {
 	},
 }
 
+var menu = {
+  enabled:true,
+  
+  //logic
+  update:function() {
+  
+  },
+
+  draw:function() {
+  
+  },
+}
+
 var pause = {
   //pauses the game if set to true
   enabled:true,
