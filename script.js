@@ -47,23 +47,22 @@ var game = {
     //clear screen
 		this.ctx.clearRect(0, 0, game.width, game.height);
     
-    //draw one object to screen, top is highest priority
-    if(finish.enabled) {
-      finish.draw();
-    }
-    else if(menu.enabled) {
-      menu.draw();
-    }
-    else if(pause.enabled) {
-      pause.draw();
-    }
-    else {
-      theKey.draw();
-    }
-    
-    //draws score at the top of the screen if you are paused or in game
-    if(!finish.enabled && !menu.enabled) {
-      scoreboard.draw();
+    //draws objects to screen based on status
+    switch(this.status) {
+      case "menu":
+        menu.draw();
+        break;
+      case "play":
+        theKey.draw();
+        scoreboard.draw();
+        break;
+      case "pause":
+        pause.draw();
+        scoreboard.draw();
+        break;
+      case "finish":
+        finish.draw();
+        break;
     }
 	},
 }
@@ -167,10 +166,10 @@ var pause = {
     theKey.key = Math.floor(Math.random()*25);
     this.enabled = !this.enabled;
     
-    if (game.status = "play") {
+    if (game.status === "play") {
       game.status = "pause";
     }
-    else if (game.status = "pause") {
+    else if (game.status === "pause") {
       game.status = "play";
     }
   },
