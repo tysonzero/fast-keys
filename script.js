@@ -119,8 +119,11 @@ var menu = {
     game.ctx.fillStyle="#FF0000";
     game.ctx.fillRect(250, 350, 300, 100);
     
-    game.ctx.textAlign="center";
     game.ctx.fillStyle="#000000";
+    game.ctx.fillRect(120, 210, 540, 10);
+    game.ctx.fillRect(140, 110, 540, 10);
+    
+    game.ctx.textAlign="center";
     
     game.ctx.font="italic 100px Arial";
     game.ctx.fillText("FAST KEYS", 400, 200);
