@@ -44,6 +44,7 @@ var game = {
     //clear screen
 		this.ctx.clearRect(0, 0, game.width, game.height);
     
+    //draw one object to screen, top is highest priority
     if(finish.enabled) {
       finish.draw();
     }
@@ -57,6 +58,7 @@ var game = {
       theKey.draw();
     }
     
+    //draws score at the top of the screen if you are paused or in game
     if(!finish.enabled && !menu.enabled) {
       scoreboard.draw();
     }
