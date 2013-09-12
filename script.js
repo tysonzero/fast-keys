@@ -8,7 +8,7 @@ var game = {
   height:600,
   
   //stores the current status
-  status:"menu";
+  status:"menu",
 	
 	setup:function() {
     //get canvas created in html so it can be accessed
@@ -120,6 +120,8 @@ var menu = {
   
   //starts the game
   start:function() {
+    game.status="play";
+  
     this.enabled = false;
     pause.enabled = false;
   },
@@ -164,6 +166,13 @@ var pause = {
   toggle:function() {
     theKey.key = Math.floor(Math.random()*25);
     this.enabled = !this.enabled;
+    
+    if (game.status = "play") {
+      game.status = "pause";
+    }
+    else if (game.status = "pause") {
+      game.status = "play";
+    }
   },
   
   //restarts the game
@@ -172,6 +181,8 @@ var pause = {
     scoreboard.time = 30;
     theKey.key = Math.floor(Math.random()*25);
     pause.toggle();
+    
+    game.status = "play";
   },
   
   //exits to the menu
@@ -180,6 +191,8 @@ var pause = {
     scoreboard.time = 30;
     theKey.key = Math.floor(Math.random()*25);
     menu.enabled = true;
+    
+    game.status = "menu";
   },
   
   //logic
@@ -228,6 +241,8 @@ var finish = {
     this.enabled = true;
     pause.enabled = true;
     
+    game.status = "finish";
+    
     //changes highscore if current score is higher
     if (scoreboard.score > scoreboard.highscore) {
       scoreboard.highscore = scoreboard.score;
@@ -241,6 +256,8 @@ var finish = {
     
     this.enabled = false;
     menu.enabled = true;
+    
+    game.status = "menu";
   },
   
   //restarts the game
@@ -250,6 +267,8 @@ var finish = {
     theKey.key = Math.floor(Math.random()*25);
     this.enabled = false;
     pause.toggle();
+    
+    game.status = "play";
   },
   
   //logic
