@@ -6,6 +6,9 @@ var game = {
   //use dimensions identical to size of enclosing <div>
   width:800,
   height:600,
+  
+  //stores the current status
+  status:"menu";
 	
 	setup:function() {
     //get canvas created in html so it can be accessed
