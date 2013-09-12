@@ -47,6 +47,9 @@ var game = {
     if(finish.enabled) {
       finish.draw();
     }
+    else if(menu.enabled) {
+      menu.draw();
+    }
     else if(pause.enabled) {
       pause.draw();
     }
@@ -54,7 +57,7 @@ var game = {
       theKey.draw();
     }
     
-    if(!finish.enabled) {
+    if(!finish.enabled && !menu.enabled) {
       scoreboard.draw();
     }
 	},
@@ -80,6 +83,9 @@ var keyBoardInput = {
         if (finish.enabled) {
           finish.skip();
         }
+        else if(menu.enabled) {
+          menu.start();
+        }
         else {
           pause.toggle();
         }
@@ -98,9 +104,10 @@ var menu = {
   //display menu if set to true
   enabled:true,
   
-  toggle:function() {
-    this.enabled = !this.enabled;
-  }
+  start:function() {
+    this.enabled = false;
+    pause.enabled = false;
+  },
   
   //logic
   update:function() {
@@ -188,6 +195,7 @@ var finish = {
     scoreboard.time = 30; //time in seconds
     
     this.enabled = false;
+    menu.enabled = true;
   },
   
   //logic
