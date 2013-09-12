@@ -113,8 +113,14 @@ var keyBoardInput = {
 var menu = {
   enabled:true, //display menu if set to true
   
-  //starts the game
+  //resets and starts the game
   start:function() {
+    //restarts values to starting values
+    scoreboard.score = 0;
+    scoreboard.time = 30;
+    theKey.key = Math.floor(Math.random()*25);
+    
+    //starts the game
     this.enabled = false;
     pause.enabled = false;
   },
