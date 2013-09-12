@@ -78,8 +78,13 @@ var keyBoardInput = {
           pause.restart();
         }
       }
+      else if(e.keyCode == 27) {
+        if (pause.enabled) {
+          pause.exit();
+        }
+      }
       //toggles pause when space key is pressed
-      if(e.keyCode === 32) {
+      else if(e.keyCode === 32) {
         if (finish.enabled) {
           finish.skip();
         }
@@ -152,6 +157,13 @@ var pause = {
     scoreboard.time = 30;
     theKey.key = Math.floor(Math.random()*25);
     pause.toggle();
+  },
+  
+  exit:function() {
+    scoreboard.score = 0;
+    scoreboard.time = 30;
+    theKey.key = Math.floor(Math.random()*25);
+    menu.enabled = true;
   },
   
   //logic
