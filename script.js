@@ -302,10 +302,12 @@ var theKey = {
     //increases the score if correct key is pressed
     if (tempKey === this.key) {
       scoreboard.score++;
+      scoreboard.combo++;
     }
     else {
       //decreases score if incorrect key is pressed
       scoreboard.score--;
+      scoreboard.combo = 0;
     }
     
     //randomizes key
@@ -331,6 +333,7 @@ var scoreboard = {
   score:0, //current score
   time:30, //time in seconds
   highscore:0, //maximum score
+  combo:0, //current combo
   
   //logic
   update:function() {
