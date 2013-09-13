@@ -196,7 +196,7 @@ var pause = {
   draw:function() {
     //draw outer pause menu box
     game.ctx.fillStyle="#000000";
-    game.ctx.fillRect(280, 100, 240, 400);
+    game.ctx.fillRect(280, 100, 240, 310);
     
     //draw pause menu title
     game.ctx.font="45px Arial";
