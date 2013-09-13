@@ -172,6 +172,9 @@ var pause = {
   restart:function() {
     scoreboard.score = 0;
     scoreboard.time = 30;
+    scoreboard.combo = 0;
+    scoreboard.combobroken = false;
+    
     theKey.key = Math.floor(Math.random()*25);
     pause.toggle();
     
@@ -182,6 +185,9 @@ var pause = {
   exit:function() {
     scoreboard.score = 0;
     scoreboard.time = 30;
+    scoreboard.combo = 0;
+    scoreboard.combobroken = false;
+    
     theKey.key = Math.floor(Math.random()*25);
     
     game.status = "menu";
@@ -240,6 +246,8 @@ var finish = {
   skip:function() {
     scoreboard.score = 0; //current score
     scoreboard.time = 30; //time in seconds
+    scoreboard.combo = 0;
+    scoreboard.combobroken = false;
     
     game.status = "menu";
   },
@@ -248,6 +256,9 @@ var finish = {
   restart:function() {
     scoreboard.score = 0;
     scoreboard.time = 30;
+    scoreboard.combo = 0;
+    scoreboard.combobroken = false;
+    
     theKey.key = Math.floor(Math.random()*25);
     pause.toggle();
     
@@ -303,6 +314,7 @@ var theKey = {
     if (tempKey === this.key) {
       scoreboard.score++;
       scoreboard.combo++;
+      scoreboard.combobroken = false;
     }
     else {
       //decreases score if incorrect key is pressed
