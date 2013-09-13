@@ -307,7 +307,11 @@ var theKey = {
     else {
       //decreases score if incorrect key is pressed
       scoreboard.score--;
-      scoreboard.combo = 0;
+      
+      if (scoreboard.combo > 0) {
+        scoreboard.combo = 0;
+        scoreboard.combobroken = true;
+      }
     }
     
     //randomizes key
@@ -334,6 +338,7 @@ var scoreboard = {
   time:30, //time in seconds
   highscore:0, //maximum score
   combo:0, //current combo
+  combobroken:false, //whether the combo was broken on the previous letter
   
   //logic
   update:function() {
@@ -360,9 +365,13 @@ var scoreboard = {
     game.ctx.font="50px Arial";
     
     //draw combo to screen
-    if (this.combo > 0) {
+    if (this.combo) {
       game.ctx.fillStyle="#00FF00";
       game.ctx.fillText("COMBO: " + this.combo, 400, 500);
+    }
+    else if (this.combobroken) {
+      game.ctx.fillStyle="#FF0000";
+      game.ctx.fillText("COMBO BROKEN", 400, 500);
     }
   },
 }
