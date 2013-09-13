@@ -117,14 +117,9 @@ var keyBoardInput = {
 }
 
 var menu = {
-  enabled:true, //display menu if set to true
-  
   //starts the game
   start:function() {
     game.status="play";
-  
-    this.enabled = false;
-    pause.enabled = false;
   },
   
   //logic
@@ -161,12 +156,9 @@ var menu = {
 }
 
 var pause = {
-  enabled:true, //pauses the game if set to true
-  
   //unpauses if paused, pauses if unpaused
   toggle:function() {
     theKey.key = Math.floor(Math.random()*25);
-    this.enabled = !this.enabled;
     
     if (game.status === "play") {
       game.status = "pause";
@@ -191,7 +183,6 @@ var pause = {
     scoreboard.score = 0;
     scoreboard.time = 30;
     theKey.key = Math.floor(Math.random()*25);
-    menu.enabled = true;
     
     game.status = "menu";
   },
@@ -235,13 +226,8 @@ var pause = {
 }
 
 var finish = {
-  enabled:false, //if true shows the finish screen
-  
   //goes to the finish screen
   start:function() {
-    this.enabled = true;
-    pause.enabled = true;
-    
     game.status = "finish";
     
     //changes highscore if current score is higher
@@ -255,9 +241,6 @@ var finish = {
     scoreboard.score = 0; //current score
     scoreboard.time = 30; //time in seconds
     
-    this.enabled = false;
-    menu.enabled = true;
-    
     game.status = "menu";
   },
   
@@ -266,7 +249,6 @@ var finish = {
     scoreboard.score = 0;
     scoreboard.time = 30;
     theKey.key = Math.floor(Math.random()*25);
-    this.enabled = false;
     pause.toggle();
     
     game.status = "play";
@@ -367,6 +349,7 @@ var scoreboard = {
     //draw score and time to screen
     game.ctx.font="30px Arial";
     game.ctx.textAlign="center";
+    game.ctx.fillStyle="#000000";
     game.ctx.fillText("Score: " + this.score, 150, 30);
     game.ctx.fillText("Time: " + (Math.floor(this.time*10)/10).toFixed(1), 400, 30);
     game.ctx.fillText("HighScore: " + this.highscore, 650, 30);
