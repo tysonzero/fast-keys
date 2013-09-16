@@ -135,8 +135,8 @@ var menu = {
     
     //draw black lines either side of title
     game.ctx.fillStyle="#000000";
-    game.ctx.fillRect(120, 210, 540, 10);
-    game.ctx.fillRect(140, 110, 540, 10);
+    game.ctx.fillRect(142, 110, 540, 10);
+    game.ctx.fillRect(125, 210, 540, 10);
     
     //center align all following text
     game.ctx.textAlign="center";
