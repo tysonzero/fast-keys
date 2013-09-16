@@ -312,8 +312,8 @@ var theKey = {
   keyPressed:function(tempKey) {
     //increases the score if correct key is pressed
     if (tempKey === this.key) {
-      scoreboard.score++;
       scoreboard.combo++;
+      scoreboard.score += scoreboard.combo;
       scoreboard.combobroken = false;
     }
     else {
