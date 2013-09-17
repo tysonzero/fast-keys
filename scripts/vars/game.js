@@ -49,6 +49,8 @@ var game = {
     //clear screen
     this.ctx.clearRect(0, 0, game.width, game.height);
     
+    background.draw();
+    
     //draws objects to screen based on status
     switch(this.status) {
       case "menu":
