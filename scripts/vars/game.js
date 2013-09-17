@@ -34,7 +34,7 @@ var game = {
     this.draw();
   },
   
-  //logic
+  //variable manipulation
   update:function() {
     switch(this.status) {
       case "play":

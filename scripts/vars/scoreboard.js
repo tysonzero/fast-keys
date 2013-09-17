@@ -5,7 +5,7 @@ var scoreboard = {
   combo:0, //current combo
   combobroken:false, //whether the combo was broken on the previous letter
   
-  //logic
+  //variable manipulation
   update:function() {
     if (this.time < 0) {
       //goes to the finish screen if time runs out
