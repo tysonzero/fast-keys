@@ -36,11 +36,6 @@ var pause = {
     game.status = "menu";
   },
   
-  //logic
-  update:function() {
-    
-  },
-  
   //drawing to screen
   draw:function() {
     //draw outer pause menu box

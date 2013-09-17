@@ -3,11 +3,6 @@ var menu = {
   start:function() {
     game.status="play";
   },
-  
-  //logic
-  update:function() {
-  
-  },
 
   //drawing to screen
   draw:function() {

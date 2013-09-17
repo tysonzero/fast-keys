@@ -32,11 +32,6 @@ var finish = {
     game.status = "play";
   },
   
-  //logic
-  update:function() {
-    
-  },
-  
   //drawing to screen
   draw:function() {
     //align following text to the center

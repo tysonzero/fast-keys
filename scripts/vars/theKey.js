@@ -24,11 +24,6 @@ var theKey = {
     this.key = Math.floor(Math.random()*25);
   },
   
-  //logic
-  update:function() {
-    
-  },
-  
   //drawing to screen
   draw:function() {
     //draw the Key

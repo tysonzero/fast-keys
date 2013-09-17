@@ -38,7 +38,6 @@ var game = {
   update:function() {
     switch(this.status) {
       case "play":
-        theKey.update();
         scoreboard.update();
         break;
     }
