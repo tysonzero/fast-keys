@@ -1,6 +1,7 @@
 var menu = {
   //starts the game
   start:function() {
+    scoreboard.reset();
     game.status="play";
   },
 
