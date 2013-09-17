@@ -67,6 +67,6 @@ var finish = {
     //display instructions
     game.ctx.font="30px Arial";
     game.ctx.fillText("PRESS SPACE TO CONTINUE", 400, 520);
-    game.ctx.fillText("PRESS BACKSPACE TO RESTART", 400, 560);
+    game.ctx.fillText("PRESS ENTER TO RESTART", 400, 560);
   },
 }

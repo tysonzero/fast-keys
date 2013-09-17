@@ -7,12 +7,12 @@ var keyBoardInput = {
     //called whenever a key is pressed
     window.onkeydown = function(e) {
       
-      if(e.keyCode === 8) {
-        //restarts game if you press backspace while in the finish screen
+      if(e.keyCode === 13) {
+        //restarts game if you press enter while in the finish screen
         if (game.status === "finish") {
           finish.restart();
         }
-        //restarts game if you press backspace while the game is paused
+        //restarts game if you press enter while the game is paused
         else if (game.status === "pause") {
           pause.restart();
         }
