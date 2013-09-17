@@ -26,7 +26,7 @@ var theKey = {
   
   newKey:function() {
     this.key = Math.floor(Math.random()*25);
-  }
+  },
   
   //drawing to screen
   draw:function() {
