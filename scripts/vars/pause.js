@@ -13,10 +13,7 @@ var pause = {
   
   //restarts the game
   restart:function() {
-    scoreboard.score = 0;
-    scoreboard.time = 30;
-    scoreboard.combo = 0;
-    scoreboard.combobroken = false;
+    scoreboard.reset();
     
     theKey.key = Math.floor(Math.random()*25);
     pause.toggle();
@@ -26,10 +23,7 @@ var pause = {
   
   //exits to the menu
   exit:function() {
-    scoreboard.score = 0;
-    scoreboard.time = 30;
-    scoreboard.combo = 0;
-    scoreboard.combobroken = false;
+    scoreboard.reset();
     
     theKey.key = Math.floor(Math.random()*25);
     

@@ -5,6 +5,14 @@ var scoreboard = {
   combo:0, //current combo
   combobroken:false, //whether the combo was broken on the previous letter
   
+  //resets variables to starting variables
+  reset:function() {
+    this.score = 0;
+    this.time = 30;
+    this.combo = 0;
+    this.combobroken = false;
+  },
+  
   //variable manipulation
   update:function() {
     if (this.time < 0) {

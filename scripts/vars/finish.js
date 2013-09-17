@@ -11,21 +11,15 @@ var finish = {
   
   //continues to the menu
   skip:function() {
-    scoreboard.score = 0; //current score
-    scoreboard.time = 30; //time in seconds
-    scoreboard.combo = 0;
-    scoreboard.combobroken = false;
+    scoreboard.reset();
     
     game.status = "menu";
   },
   
   //restarts the game
   restart:function() {
-    scoreboard.score = 0;
-    scoreboard.time = 30;
-    scoreboard.combo = 0;
-    scoreboard.combobroken = false;
-    
+    scoreboard.reset();
+  
     theKey.key = Math.floor(Math.random()*25);
     pause.toggle();
     
