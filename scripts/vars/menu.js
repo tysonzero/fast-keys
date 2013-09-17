@@ -2,6 +2,7 @@ var menu = {
   //starts the game
   start:function() {
     scoreboard.reset();
+    theKey.newKey();
     game.status="play";
   },
 

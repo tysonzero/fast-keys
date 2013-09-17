@@ -12,6 +12,7 @@ var finish = {
   //continues to the menu
   skip:function() {
     scoreboard.reset();
+    theKey.newKey();
     
     game.status = "menu";
   },
@@ -19,8 +20,7 @@ var finish = {
   //restarts the game
   restart:function() {
     scoreboard.reset();
-  
-    theKey.key = Math.floor(Math.random()*25);
+    theKey.newKey();
     pause.toggle();
     
     game.status = "play";

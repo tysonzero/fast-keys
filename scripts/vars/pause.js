@@ -14,8 +14,7 @@ var pause = {
   //restarts the game
   restart:function() {
     scoreboard.reset();
-    
-    theKey.key = Math.floor(Math.random()*25);
+    theKey.newKey();
     pause.toggle();
     
     game.status = "play";
@@ -24,8 +23,7 @@ var pause = {
   //exits to the menu
   exit:function() {
     scoreboard.reset();
-    
-    theKey.key = Math.floor(Math.random()*25);
+    theKey.newKey();
     
     game.status = "menu";
   },
