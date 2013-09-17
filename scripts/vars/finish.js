@@ -13,7 +13,6 @@ var finish = {
   skip:function() {
     scoreboard.reset();
     theKey.newKey();
-    
     game.status = "menu";
   },
   
