@@ -6,6 +6,7 @@ require(
     "vars/game",
     "vars/keyBoardInput",
     "vars/menu",
+    "vars/mouseInput",
     "vars/pause",
     "vars/scoreboard",
     "vars/theKey"
