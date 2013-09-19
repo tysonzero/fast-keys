@@ -24,6 +24,9 @@ var game = {
     //allows keyboard input
     keyBoardInput.initialize();
     
+    //allows mouse input
+    mouseInput.initialize();
+    
     //calls run() every 1/60th of a second
     this.timer = setInterval(function(){game.run()}, 16 + 2/3);	
   },
