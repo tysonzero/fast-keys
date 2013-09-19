@@ -1,9 +1,9 @@
-var mouseInput() {
+var mouseInput = {
   initialize:function() {
     
-  }
+  },
   
   mouseDown:function() {
   
-  }
+  },
 }
