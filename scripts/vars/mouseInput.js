@@ -1,6 +1,6 @@
 var mouseInput = {
   initialize:function() {
-    game.canvas.addEventListener('mousedown', this.mouseDown);
+    game.canvas.addEventListener('mousedown', this.mouseDown, false);
   },
   
   mouseDown:function() {
