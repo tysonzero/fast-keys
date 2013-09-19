@@ -6,7 +6,6 @@ var keyBoardInput = {
   _bind_keys:function() {
     //called whenever a key is pressed
     window.onkeydown = function(e) {
-      
       if(e.keyCode === 13) {
         //restarts game if you press enter while in the finish screen
         if (game.status === "finish") {
@@ -23,15 +22,17 @@ var keyBoardInput = {
           pause.exit();
         }
       }
-      //toggles pause when space key is pressed
       else if(e.keyCode === 32) {
         if (game.status === "finish") {
+          //goes back to menu when space key is pressed in finish
           finish.skip();
         }
         else if(game.status === "menu") {
+          //starts game when space key is pressed in menu
           menu.start();
         }
         else if (game.status === "pause" || "play") {
+          //toggles pause when space key is pressed in game
           pause.toggle();
         }
       }
