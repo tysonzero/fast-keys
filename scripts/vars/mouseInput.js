@@ -12,7 +12,7 @@ var mouseInput = {
     var rect = game.canvas.getBoundingClientRect();
     return {
       x: evt.clientX - rect.left,
-      y: evt.clientY - rect.top
+      y: evt.clientY - rect.top,
     };
-  }
+  },
 }
