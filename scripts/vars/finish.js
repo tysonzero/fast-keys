@@ -20,7 +20,6 @@ var finish = {
   restart:function() {
     scoreboard.reset();
     theKey.newKey();
-    pause.toggle();
     
     game.status = "play";
   },
