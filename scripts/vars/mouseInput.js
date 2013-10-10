@@ -7,11 +7,13 @@ var mouseInput = {
   //called when mouse is clicked
   mouseDown:function(evt) {
     mousePos = mouseInput.getMousePos(evt);
-    alert("X=" + mousePos.x + " Y=" + mousePos.y);
     
     //interact with certain objects based on game status
     switch(game.status) {
       case "menu":
+        if (mousePos.x >= 250 && mousePos.x < 550 && mousePos.y >= 350 && mousePos.y < 450) {
+          game.status="play";
+        }
         break;
       case "play":
         break;
