@@ -24,6 +24,12 @@ var theKey = {
     this.key = Math.floor(Math.random()*25);
   },
   
+  //pauses the game
+  pause:function() {
+    game.status = "pause";
+  },
+  
+  //gets a new key
   newKey:function() {
     this.key = Math.floor(Math.random()*25);
   },
