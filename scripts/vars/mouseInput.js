@@ -32,6 +32,14 @@ var mouseInput = {
         }
         break;
       case "finish":
+        if (mousePos.y >= 450 && mousePos.y < 550) {
+          if (mousePos.x >= 60 && mousePos.x < 360) {
+            finish.restart();
+          }
+          else if (mousePos.x >= 440 && mousePos.x < 740) {
+            finish.skip();
+          }
+        }
         break;
     }
   },
