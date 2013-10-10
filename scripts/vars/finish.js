@@ -59,12 +59,12 @@ var finish = {
     
     //draw play text
     game.ctx.font="60px Arial";
-    game.ctx.fillText("MENU", 210, 510);
-    game.ctx.fillText("RESTART", 590, 510);
+    game.ctx.fillText("PLAY", 210, 510);
+    game.ctx.fillText("EXIT", 590, 510);
     
     //draw play instructions
     game.ctx.font="20px Arial";
     game.ctx.fillText("press space", 210, 540);
-    game.ctx.fillText("press enter", 590, 540);
+    game.ctx.fillText("press escape", 590, 540);
   },
 }
