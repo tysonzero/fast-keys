@@ -1,4 +1,5 @@
 var keyBoardInput = {
+  //creates keyboard listener
   initialize:function() {
     this._bind_keys();
   },

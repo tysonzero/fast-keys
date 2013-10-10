@@ -1,6 +1,5 @@
 var theKey = {
-  //integer representing the next letter to press
-  key:0,
+  key:0, //integer representing the next letter to press
   
   //called whenever a letter is pressed
   keyPressed:function(tempKey) {
@@ -14,6 +13,7 @@ var theKey = {
       //decreases score if incorrect key is pressed
       scoreboard.score--;
       
+      //resets combo if incorrect key is pressed
       if (scoreboard.combo > 0) {
         scoreboard.combo = 0;
         scoreboard.combobroken = true;
