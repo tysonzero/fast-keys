@@ -28,8 +28,8 @@ var finish = {
   draw:function() {
     //draw red play button background
     game.ctx.fillStyle="#FF0000";
-    game.ctx.fillRect(60, 450, 300, 100);
-    game.ctx.fillRect(440, 450, 300, 100);
+    game.ctx.fillRect(160, 480, 200, 60);
+    game.ctx.fillRect(440, 480, 200, 60);
     
     //align following text to the center
     game.ctx.textAlign="center";
@@ -57,13 +57,13 @@ var finish = {
     game.ctx.fillText("HIGHSCORE: " + scoreboard.highscore, 400, 300);
     
     //draw play text
-    game.ctx.font="60px Arial";
-    game.ctx.fillText("PLAY", 210, 510);
-    game.ctx.fillText("EXIT", 590, 510);
+    game.ctx.font="30px Arial";
+    game.ctx.fillText("PLAY", 260, 510);
+    game.ctx.fillText("EXIT", 540, 510);
     
     //draw play instructions
-    game.ctx.font="20px Arial";
-    game.ctx.fillText("press space", 210, 540);
-    game.ctx.fillText("press escape", 590, 540);
+    game.ctx.font="15px Arial";
+    game.ctx.fillText("press space", 260, 530);
+    game.ctx.fillText("press escape", 540, 530);
   },
 }
