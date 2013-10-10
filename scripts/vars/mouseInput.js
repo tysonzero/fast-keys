@@ -16,6 +16,7 @@ var mouseInput = {
         }
         break;
       case "play":
+        game.status="pause";
         break;
       case "pause":
         break;
