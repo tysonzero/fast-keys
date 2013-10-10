@@ -16,12 +16,12 @@ var mouseInput = {
         }
         break;
       case "play":
-        pause.toggle();
+        theKey.pause();
         break;
       case "pause":
         if (mousePos.x >= 300 && mousePos.x < 500) {
           if (mousePos.y >= 170 && mousePos.y < 230) {
-            pause.toggle();
+            pause.play();
           }
           else if (mousePos.y >= 250 && mousePos.y < 310) {
             pause.restart();
