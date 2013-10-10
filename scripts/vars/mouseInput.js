@@ -12,13 +12,24 @@ var mouseInput = {
     switch(game.status) {
       case "menu":
         if (mousePos.x >= 250 && mousePos.x < 550 && mousePos.y >= 350 && mousePos.y < 450) {
-          game.status="play";
+          menu.start();
         }
         break;
       case "play":
-        game.status="pause";
+        pause.toggle();
         break;
       case "pause":
+        if (mousePos.x >= 300 && mousePos.x < 500) {
+          if (mousePos.y >= 170 && mousePos.y < 230) {
+            pause.toggle();
+          }
+          else if (mousePos.y >= 250 && mousePos.y < 310) {
+            pause.restart();
+          }
+          else if (mousePos.y >= 330 && mousePos.y < 390) {
+            pause.exit();
+          }
+        }
         break;
       case "finish":
         break;
