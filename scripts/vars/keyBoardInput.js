@@ -7,12 +7,8 @@ var keyBoardInput = {
     //called whenever a key is pressed
     window.onkeydown = function(e) {
       if(e.keyCode === 13) {
-        //restarts game if you press enter while in the finish screen
-        if (game.status === "finish") {
-          finish.restart();
-        }
         //restarts game if you press enter while the game is paused
-        else if (game.status === "pause") {
+        if (game.status === "pause") {
           pause.restart();
         }
       }
@@ -21,11 +17,15 @@ var keyBoardInput = {
         if (game.status === "pause") {
           pause.exit();
         }
+        //exits to main menu if you press escape while in the finish screen
+        else if (game.status === "finish") {
+          finish.skip();
+        }
       }
       else if(e.keyCode === 32) {
         if (game.status === "finish") {
-          //goes back to menu when space key is pressed in finish
-          finish.skip();
+          //restarts game if you press space while in the finish screen
+          finish.restart();
         }
         else if(game.status === "menu") {
           //starts game when space key is pressed in menu
