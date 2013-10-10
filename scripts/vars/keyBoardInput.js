@@ -31,9 +31,13 @@ var keyBoardInput = {
           //starts game when space key is pressed in menu
           menu.start();
         }
-        else if (game.status === "pause" || "play") {
-          //toggles pause when space key is pressed in game
-          pause.toggle();
+        else if (game.status === "pause") {
+          //upauses game when space key is pressed in pause menu
+          pause.play();
+        }
+        else if (game.status === "play") {
+          //pauses game when space key is pressed in game
+          theKey.pause();
         }
       }
       //passes in the letter pressed
