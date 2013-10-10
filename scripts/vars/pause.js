@@ -1,7 +1,7 @@
 var pause = {
   //unpauses the game
   play:function() {
-    theKey.key = Math.floor(Math.random()*25);
+    theKey.newKey();
     game.status = "play";
   },
   

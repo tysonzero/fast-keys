@@ -1,6 +1,6 @@
 var theKey = {
   //integer representing the next letter to press
-  key:Math.floor(Math.random()*25),
+  key:0,
   
   //called whenever a letter is pressed
   keyPressed:function(tempKey) {
@@ -21,7 +21,7 @@ var theKey = {
     }
     
     //randomizes key
-    this.key = Math.floor(Math.random()*25);
+    theKey.newKey();
   },
   
   //pauses the game
