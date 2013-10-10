@@ -1,21 +1,14 @@
 var pause = {
-  //unpauses if paused, pauses if unpaused
-  toggle:function() {
+  //unpauses the game
+  play:function() {
     theKey.key = Math.floor(Math.random()*25);
-    
-    if (game.status === "play") {
-      game.status = "pause";
-    }
-    else if (game.status === "pause") {
-      game.status = "play";
-    }
+    game.status = "play";
   },
   
   //restarts the game
   restart:function() {
     scoreboard.reset();
     theKey.newKey();
-    pause.toggle();
     
     game.status = "play";
   },
