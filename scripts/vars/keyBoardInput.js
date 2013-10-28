@@ -47,6 +47,6 @@ var keyBoardInput = {
           theKey.keyPressed(e.keyCode - 65);
         }
       }
-    }
+    };
   },
-}
+};
