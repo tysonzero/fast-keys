@@ -1,7 +1,7 @@
 require(
   //imports required js files
   [
-    "vars/background", 
+    "vars/background",
     "vars/finish",
     "vars/game",
     "vars/keyBoardInput",
