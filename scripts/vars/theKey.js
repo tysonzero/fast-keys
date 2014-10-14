@@ -42,4 +42,4 @@ var theKey = {
     game.ctx.fillStyle="#000000";
     game.ctx.fillText(String.fromCharCode(this.key + 65), 400, 340);
   },
-}
+};

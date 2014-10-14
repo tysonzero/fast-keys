@@ -59,4 +59,4 @@ var mouseInput = {
       y: evt.clientY - rect.top,
     };
   },
-}
+};

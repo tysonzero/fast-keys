@@ -66,4 +66,4 @@ var finish = {
     game.ctx.fillText("press space", 260, 530);
     game.ctx.fillText("press escape", 540, 530);
   },
-}
+};

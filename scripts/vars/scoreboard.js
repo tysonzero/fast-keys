@@ -47,4 +47,4 @@ var scoreboard = {
       game.ctx.fillText("COMBO BROKEN", 400, 500);
     }
   },
-}
+};
