@@ -35,9 +35,8 @@ var scoreboard = {
     game.ctx.fillText("Time: " + (Math.floor(this.time*10)/10).toFixed(1), 400, 30);
     game.ctx.fillText("HighScore: " + this.highscore, 650, 30);
     
-    game.ctx.font="50px Arial";
-    
     //draw combo to screen
+    game.ctx.font="50px Arial";
     if (this.combo) {
       game.ctx.fillStyle="#00FF00";
       game.ctx.fillText("COMBO: " + this.combo, 400, 500);

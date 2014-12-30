@@ -1,12 +1,11 @@
 var finish = {
   //goes to the finish screen
   start:function() {
-    game.status = "finish";
-    
     //changes highscore if current score is higher
     if (scoreboard.score > scoreboard.highscore) {
       scoreboard.highscore = scoreboard.score;
     }
+    game.status = "finish";
   },
   
   //continues to the menu
@@ -20,7 +19,6 @@ var finish = {
   restart:function() {
     scoreboard.reset();
     theKey.newKey();
-    
     game.status = "play";
   },
   

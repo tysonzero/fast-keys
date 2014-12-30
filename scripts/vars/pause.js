@@ -9,7 +9,6 @@ var pause = {
   restart:function() {
     scoreboard.reset();
     theKey.newKey();
-    
     game.status = "play";
   },
   
@@ -17,7 +16,6 @@ var pause = {
   exit:function() {
     scoreboard.reset();
     theKey.newKey();
-    
     game.status = "menu";
   },
   
