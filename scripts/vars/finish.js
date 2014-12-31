@@ -1,9 +1,14 @@
+var score = 0;
+var submit = false;
+
 var finish = {
   //goes to the finish screen
   start:function() {
     //changes highscore if current score is higher
     if (scoreboard.score > scoreboard.highscore) {
       scoreboard.highscore = scoreboard.score;
+      score = scoreboard.score;
+      submit = true;
     }
     game.status = "finish";
   },
