@@ -37,9 +37,9 @@ var theKey = {
   //drawing to screen
   draw:function() {
     //draw the Key
-    game.ctx.font="100px Arial";
-    game.ctx.textAlign="center";
-    game.ctx.fillStyle="#000000";
+    game.ctx.font = "100px Arial";
+    game.ctx.textAlign = "center";
+    game.ctx.fillStyle = "#000000";
     game.ctx.fillText(String.fromCharCode(this.key + 65), 400, 340);
   },
 };
