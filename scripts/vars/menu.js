@@ -1,13 +1,13 @@
 var menu = {
   //starts the game
-  start:function() {
+  start: function() {
     scoreboard.reset();
     theKey.newKey();
     game.status = "play";
   },
 
   //drawing to screen
-  draw:function() {
+  draw: function() {
     //draw red play button background
     game.ctx.fillStyle = "#FF0000";
     game.ctx.fillRect(250, 350, 300, 100);

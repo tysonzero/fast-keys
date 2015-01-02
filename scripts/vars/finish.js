@@ -3,7 +3,7 @@ var submit = false;
 
 var finish = {
   //goes to the finish screen
-  start:function() {
+  start: function() {
     //changes highscore if current score is higher
     if (scoreboard.score > scoreboard.highscore) {
       scoreboard.highscore = scoreboard.score;
@@ -14,21 +14,21 @@ var finish = {
   },
   
   //continues to the menu
-  skip:function() {
+  skip: function() {
     scoreboard.reset();
     theKey.newKey();
     game.status = "menu";
   },
   
   //restarts the game
-  restart:function() {
+  restart: function() {
     scoreboard.reset();
     theKey.newKey();
     game.status = "play";
   },
   
   //drawing to screen
-  draw:function() {
+  draw: function() {
     //draw red play button background
     game.ctx.fillStyle = "#FF0000";
     game.ctx.fillRect(160, 480, 200, 60);

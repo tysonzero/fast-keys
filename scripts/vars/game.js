@@ -1,16 +1,16 @@
 var game = {
   //declaring canvas and ctx so they can be globally accessed
-  canvas:null,
-  ctx:null,
+  canvas: null,
+  ctx: null,
   
   //use dimensions identical to size of enclosing <div>
-  width:800,
-  height:600,
+  width: 800,
+  height: 600,
   
   //stores the current status
-  status:"menu",
+  status: "menu",
   
-  setup:function() {
+  setup: function() {
     //get canvas created in html so it can be accessed
     this.canvas = document.getElementById('game_canvas');
     
@@ -37,13 +37,13 @@ var game = {
   },
   
   //run every 1/60th of a second
-  run:function() {
+  run: function() {
     this.update();
     this.draw();
   },
   
   //variable manipulation
-  update:function() {
+  update: function() {
     switch(this.status) {
       case "play":
         scoreboard.update();
@@ -52,7 +52,7 @@ var game = {
   },
   
   //drawing to screen
-  draw:function() {
+  draw: function() {
     //clear screen
     this.ctx.clearRect(0, 0, game.width, game.height);
     
