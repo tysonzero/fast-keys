@@ -3,11 +3,11 @@ var mouseInput = {
     initialize: function() {
         game.canvas.addEventListener('mousedown', this.mouseDown, false);
     },
-    
+
     //called when mouse is clicked
     mouseDown: function(evt) {
         mousePos = mouseInput.getMousePos(evt);
-        
+
         //interact with certain objects based on game status and mouse position
         switch(game.status) {
             case "menu":
@@ -50,7 +50,7 @@ var mouseInput = {
                 break;
         }
     },
-    
+
     //returns mouse position within canvas
     getMousePos: function(evt) {
         var rect = game.canvas.getBoundingClientRect();

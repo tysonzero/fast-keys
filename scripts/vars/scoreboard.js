@@ -4,7 +4,7 @@ var scoreboard = {
     highscore: 0, //maximum score
     combo: 0, //current combo
     combobroken: false, //whether the combo was broken on the previous letter
-    
+
     //resets variables to starting variables
     reset: function() {
         this.score = 0;
@@ -12,7 +12,7 @@ var scoreboard = {
         this.combo = 0;
         this.combobroken = false;
     },
-    
+
     //variable manipulation
     update: function() {
         if (this.time < 0) {
@@ -24,7 +24,7 @@ var scoreboard = {
             this.time -= 1/60;
         }
     },
-    
+
     //drawing to screen
     draw: function() {
         //draw score and time to screen
@@ -34,7 +34,7 @@ var scoreboard = {
         game.ctx.fillText("Score: " + this.score, 150, 30);
         game.ctx.fillText("Time: " + (Math.floor(this.time*10)/10).toFixed(1), 400, 30);
         game.ctx.fillText("HighScore: " + this.highscore, 650, 30);
-        
+
         //draw combo to screen
         game.ctx.font = "50px Arial";
         if (this.combo) {
