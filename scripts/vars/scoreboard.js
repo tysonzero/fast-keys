@@ -6,7 +6,7 @@ var scoreboard = {
     combobroken: false, //whether the combo was broken on the previous letter
 
     //resets variables to starting variables
-    reset: function() {
+    reset: function () {
         this.score = 0;
         this.time = 30;
         this.combo = 0;
@@ -14,7 +14,7 @@ var scoreboard = {
     },
 
     //variable manipulation
-    update: function() {
+    update: function () {
         if (this.time < 0) {
             //goes to the finish screen if time runs out
             finish.start();
@@ -26,7 +26,7 @@ var scoreboard = {
     },
 
     //drawing to screen
-    draw: function() {
+    draw: function () {
         //draw score and time to screen
         game.ctx.font = "30px Arial";
         game.ctx.textAlign = "center";

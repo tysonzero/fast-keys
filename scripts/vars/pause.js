@@ -1,26 +1,26 @@
 var pause = {
     //unpauses the game
-    play: function() {
+    play: function () {
         theKey.newKey();
         game.status = "play";
     },
 
     //restarts the game
-    restart: function() {
+    restart: function () {
         scoreboard.reset();
         theKey.newKey();
         game.status = "play";
     },
 
     //exits to the menu
-    exit: function() {
+    exit: function () {
         scoreboard.reset();
         theKey.newKey();
         game.status = "menu";
     },
 
     //drawing to screen
-    draw: function() {
+    draw: function () {
         //draw outer pause menu box
         game.ctx.fillStyle = "#000000";
         game.ctx.fillRect(280, 100, 240, 310);

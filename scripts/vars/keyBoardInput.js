@@ -1,12 +1,12 @@
 var keyBoardInput = {
     //creates keyboard listener
-    initialize: function() {
+    initialize: function () {
         this._bind_keys();
     },
 
-    _bind_keys: function() {
+    _bind_keys: function () {
         //called whenever a key is pressed
-        window.onkeydown = function(e) {
+        window.onkeydown = function (e) {
             if(e.keyCode === 13) {
                 //restarts game if you press enter while the game is paused
                 if (game.status === "pause") {

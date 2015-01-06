@@ -12,7 +12,7 @@ require(
         "vars/theKey"
     ],
     //runs game.setup() once files are imported
-    function() {
+    function () {
         game.setup();
     }
 );
