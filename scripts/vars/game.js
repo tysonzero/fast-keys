@@ -44,10 +44,10 @@ var game = {
 
     //variable manipulation
     update: function () {
-        switch(this.status) {
-            case "play":
-                scoreboard.update();
-                break;
+        switch (this.status) {
+        case "play":
+            scoreboard.update();
+            break;
         }
     },
 
@@ -60,21 +60,21 @@ var game = {
         background.draw();
 
         //draws objects to screen based on status
-        switch(this.status) {
-            case "menu":
-                menu.draw();
-                break;
-            case "play":
-                theKey.draw();
-                scoreboard.draw();
-                break;
-            case "pause":
-                pause.draw();
-                scoreboard.draw();
-                break;
-            case "finish":
-                finish.draw();
-                break;
+        switch (this.status) {
+        case "menu":
+            menu.draw();
+            break;
+        case "play":
+            theKey.draw();
+            scoreboard.draw();
+            break;
+        case "pause":
+            pause.draw();
+            scoreboard.draw();
+            break;
+        case "finish":
+            finish.draw();
+            break;
         }
     },
 };
