@@ -13,7 +13,7 @@ var keyBoardInput = {
                     pause.restart();
                 }
             }
-            else if(e.keyCode == 27) {
+            else if(e.keyCode === 27) {
                 //exits to main menu if you press escape while the game is paused
                 if (game.status === "pause") {
                     pause.exit();
