@@ -18,8 +18,7 @@ var scoreboard = {
         if (this.time < 0) {
             //goes to the finish screen if time runs out
             finish.start();
-        }
-        else {
+        } else {
             //decreases timer by 1 per second if there is still time left
             this.time -= 1/60;
         }
@@ -40,8 +39,7 @@ var scoreboard = {
         if (this.combo) {
             game.ctx.fillStyle = "#00FF00";
             game.ctx.fillText("COMBO: " + this.combo, 400, 500);
-        }
-        else if (this.combobroken) {
+        } else if (this.combobroken) {
             game.ctx.fillStyle = "#FF0000";
             game.ctx.fillText("COMBO BROKEN", 400, 500);
         }

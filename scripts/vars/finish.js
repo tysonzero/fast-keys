@@ -42,17 +42,14 @@ var finish = {
         game.ctx.font = "60px Arial";
         game.ctx.fillText("GAME OVER", 400, 140);
 
-        //display try again if you don't beat your highscore
+        //display try again if you don't beat your highscore and display highscore if you tie with or beat your highscore
         if (scoreboard.score < scoreboard.highscore) {
             game.ctx.fillStyle = "#FF0000";
             game.ctx.fillText("TRY AGAIN", 400, 400);
-        }
-        //display highscore if you tie with or beat your highscore
-        else if (scoreboard.score === scoreboard.highscore) {
+        } else if (scoreboard.score === scoreboard.highscore) {
             game.ctx.fillStyle = "#00FF00";
             game.ctx.fillText("HIGHSCORE!", 400, 400);
         }
-
         //display score and highscore
         game.ctx.fillStyle = "#000000";
         game.ctx.font = "40px Arial";

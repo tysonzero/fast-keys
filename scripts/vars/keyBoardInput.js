@@ -12,8 +12,7 @@ var keyBoardInput = {
                 if (game.status === "pause") {
                     pause.restart();
                 }
-            }
-            else if(e.keyCode === 27) {
+            } else if(e.keyCode === 27) {
                 //exits to main menu if you press escape while the game is paused
                 if (game.status === "pause") {
                     pause.exit();
@@ -22,21 +21,17 @@ var keyBoardInput = {
                 else if (game.status === "finish") {
                     finish.skip();
                 }
-            }
-            else if(e.keyCode === 32) {
+            } else if(e.keyCode === 32) {
                 if (game.status === "finish") {
                     //restarts game if you press space while in the finish screen
                     finish.restart();
-                }
-                else if(game.status === "menu") {
+                } else if(game.status === "menu") {
                     //starts game when space key is pressed in menu
                     menu.start();
-                }
-                else if (game.status === "pause") {
+                } else if (game.status === "pause") {
                     //upauses game when space key is pressed in pause menu
                     pause.play();
-                }
-                else if (game.status === "play") {
+                } else if (game.status === "play") {
                     //pauses game when space key is pressed in game
                     theKey.pause();
                 }

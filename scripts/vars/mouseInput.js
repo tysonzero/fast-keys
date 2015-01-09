@@ -25,12 +25,10 @@ var mouseInput = {
                 if (mousePos.y >= 170 && mousePos.y < 230) {
                     //within rect(300, 170, 200, 60)
                     pause.play();
-                }
-                else if (mousePos.y >= 250 && mousePos.y < 310) {
+                } else if (mousePos.y >= 250 && mousePos.y < 310) {
                     //within rect(300, 250, 200, 60)
                     pause.restart();
-                }
-                else if (mousePos.y >= 330 && mousePos.y < 390) {
+                } else if (mousePos.y >= 330 && mousePos.y < 390) {
                     //within rect(300, 330, 200, 60)
                     pause.exit();
                 }
@@ -41,8 +39,7 @@ var mouseInput = {
                 if (mousePos.x >= 160 && mousePos.x < 360) {
                     //within rect(160, 480, 200, 60)
                     finish.restart();
-                }
-                else if (mousePos.x >= 440 && mousePos.x < 640) {
+                } else if (mousePos.x >= 440 && mousePos.x < 640) {
                     //within rect(440, 480, 200, 60)
                     finish.skip();
                 }

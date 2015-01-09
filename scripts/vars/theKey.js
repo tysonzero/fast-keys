@@ -8,8 +8,7 @@ var theKey = {
             scoreboard.combo++;
             scoreboard.score += scoreboard.combo;
             scoreboard.combobroken = false;
-        }
-        else {
+        } else {
             //decreases score if incorrect key is pressed
             scoreboard.score--;
 
