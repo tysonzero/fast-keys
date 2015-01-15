@@ -49,5 +49,5 @@ var pause = {
         game.ctx.fillText("press space", 400, 220);
         game.ctx.fillText("press enter", 400, 300);
         game.ctx.fillText("press escape", 400, 380);
-    },
+    }
 };

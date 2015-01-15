@@ -76,5 +76,5 @@ var game = {
             finish.draw();
             break;
         }
-    },
+    }
 };

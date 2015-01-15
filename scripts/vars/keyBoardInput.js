@@ -43,5 +43,5 @@ var keyBoardInput = {
                 }
             }
         };
-    },
+    }
 };

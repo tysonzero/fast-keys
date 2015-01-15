@@ -31,5 +31,5 @@ var menu = {
         //draw play instructions
         game.ctx.font = "20px Arial";
         game.ctx.fillText("press space", 400, 440);
-    },
+    }
 };

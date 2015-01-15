@@ -43,5 +43,5 @@ var scoreboard = {
             game.ctx.fillStyle = "#FF0000";
             game.ctx.fillText("COMBO BROKEN", 400, 500);
         }
-    },
+    }
 };
