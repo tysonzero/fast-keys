@@ -31,7 +31,7 @@ var scoreboard = {
         game.ctx.textAlign = "center";
         game.ctx.fillStyle = "#000000";
         game.ctx.fillText("Score: " + this.score, 150, 30);
-        game.ctx.fillText("Time: " + (Math.floor(this.time*10)/10).toFixed(1), 400, 30);
+        game.ctx.fillText("Time: " + (Math.floor(this.time * 10)/10).toFixed(1), 400, 30);
         game.ctx.fillText("HighScore: " + this.highscore, 650, 30);
 
         //draw combo to screen

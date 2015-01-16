@@ -30,7 +30,7 @@ var theKey = {
 
     //gets a new key
     newKey: function () {
-        this.key = Math.floor(Math.random()*25);
+        this.key = Math.floor(Math.random() * 25);
     },
 
     //drawing to screen
