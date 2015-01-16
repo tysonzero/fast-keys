@@ -32,7 +32,7 @@ var game = {
             function () {
                 game.run();
             },
-            16 + 2/3
+            16 + 2 / 3
         );
     },
 
