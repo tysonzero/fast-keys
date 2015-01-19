@@ -10,17 +10,17 @@ var mouseInput = {
 
         //interact with certain objects based on game status and mouse position
         switch (game.status) {
-        case "menu":
+        case 'menu':
             if (mousePos.x >= 250 && mousePos.x < 550 && mousePos.y >= 350 && mousePos.y < 450) {
                 //within rect(250, 350, 300, 100)
                 menu.start();
             }
             break;
-        case "play":
+        case 'play':
             //within canvas
             theKey.pause();
             break;
-        case "pause":
+        case 'pause':
             if (mousePos.x >= 300 && mousePos.x < 500) {
                 if (mousePos.y >= 170 && mousePos.y < 230) {
                     //within rect(300, 170, 200, 60)
@@ -34,7 +34,7 @@ var mouseInput = {
                 }
             }
             break;
-        case "finish":
+        case 'finish':
             if (mousePos.y >= 480 && mousePos.y < 540) {
                 if (mousePos.x >= 160 && mousePos.x < 360) {
                     //within rect(160, 480, 200, 60)

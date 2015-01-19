@@ -8,7 +8,7 @@ var game = {
     height: 600,
 
     //stores the current status
-    status: "menu",
+    status: 'menu',
 
     setup: function () {
         //get canvas created in html so it can be accessed
@@ -45,7 +45,7 @@ var game = {
     //variable manipulation
     update: function () {
         switch (this.status) {
-        case "play":
+        case 'play':
             scoreboard.update();
             break;
         }
@@ -61,18 +61,18 @@ var game = {
 
         //draws objects to screen based on status
         switch (this.status) {
-        case "menu":
+        case 'menu':
             menu.draw();
             break;
-        case "play":
+        case 'play':
             theKey.draw();
             scoreboard.draw();
             break;
-        case "pause":
+        case 'pause':
             pause.draw();
             scoreboard.draw();
             break;
-        case "finish":
+        case 'finish':
             finish.draw();
             break;
         }
