@@ -1,4 +1,4 @@
-Fast_Keys
+Fast Keys
 =========
 
 Reaction based typing game
